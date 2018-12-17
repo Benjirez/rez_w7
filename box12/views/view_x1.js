@@ -37,17 +37,51 @@ function doIt(){
 	var selTx;
 
 	sel1.change( doIt );
+
+
+	$('#clr_btn').on('click', function () {
+
+			console.log('clearing foo');
+
+			$("#colA").html("");
+			$("#colB").html("");
+			$("#colC").html("");
+			$("#colD").html("");
+			$("#colE").html("");
+			$("#colF").html("");
+			$("#colG").html("");
+			$("#colH").html("");
+			$("#colI").html("");
+			$("#colJ").html("");
+
+	});
+
+	
+
+
   
 	  $('#add_btn').on('click', function(){
 		console.log('submitting yo');
 		
 		  //var item = $('#form1 input');
-		  var todoX = {item: selTx};
+		  var my_x1 = { 
+
+				col_a: $("#colA").val(),
+				col_b: $("#colB").val(),
+				col_c: $("#colC").val(),
+				col_d: $("#colD").val(),
+				col_e: $("#colE").val(),
+				col_f: $("#colF").val(),
+				col_g: $("#colG").val(),
+				col_h: $("#colH").val(),
+				col_i: $("#colI").val(),
+				col_j: $("#colJ").val()
+				};
 
 		  $.ajax({
 			type: 'POST',
-			url: '/',
-			data: todoX,
+			url: '/x1',
+			data: my_x1,
 			success: function(data){
 			  //do something with the data via front-end framework
 			  location.reload();

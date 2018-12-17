@@ -253,6 +253,16 @@ module.exports = function(xsvr){
 
 		console.log('controller1 called route drag1');
 	});
+
+
+	//create new todoModel with data from req.body, push to db, reload view
+	xsvr.post('/x1', urlencodedParser, function (req, res) {
+		var new_x1 = model_x1(req.body).save(function (err, data) {
+			if (err) throw err;
+			res.json(data);
+			console.log(data);
+		});
+	});
 	
 
 	// get todo data and render view
