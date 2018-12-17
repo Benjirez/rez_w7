@@ -33,6 +33,8 @@ function doIt(){
 	
 }
 
+doIt();
+
 //sel1.on("change", function() {console.log("nah holmes")} );
 	var selTx;
 
@@ -43,7 +45,7 @@ function doIt(){
 
 			console.log('clearing foo');
 
-			$("#colA").html("");
+			$("#colA").val("");
 			$("#colB").html("");
 			$("#colC").html("");
 			$("#colD").html("");
@@ -93,7 +95,7 @@ function doIt(){
 		
 	  });
   
-  doIt();
+ 
   
 //$( "#sel1 option:selected"
 /*
